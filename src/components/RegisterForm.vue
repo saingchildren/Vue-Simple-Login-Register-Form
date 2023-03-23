@@ -8,7 +8,7 @@ const password = ref("");
 const onSubmit = () => {
   AuthService.register(username.value, email.value, password.value)
     .then(() => {
-      window.alert("Register Success")
+      window.alert("Register Success");
       console.log("success");
     })
     .catch((error) => {
@@ -22,7 +22,7 @@ const onSubmit = () => {
 <template>
   <div class="register-div">
     <h1>Register Page</h1>
-    <b-form @submit.prevent="onSubmit">
+    <b-form class="register-form" @submit.prevent="onSubmit">
       <b-form-group label="Username" lable-for="inputUsername">
         <b-form-input
           v-model="username"
@@ -69,6 +69,7 @@ const onSubmit = () => {
   border: 2px solid;
   padding: 50px;
   border-radius: 20px;
+  backdrop-filter: blur(20px) saturate(150%) contrast(170%);
 }
 
 .register-div > h1 {

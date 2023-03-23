@@ -14,8 +14,8 @@ import Navbar from "./components/Navbar.vue";
 main {
   display: grid;
   height: 90vh;
-  background: linear-gradient(45deg, #F49938, #6028B1);
   place-items: center;
+  background: #999999;
 }
 </style>
 

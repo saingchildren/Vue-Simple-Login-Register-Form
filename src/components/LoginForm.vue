@@ -51,6 +51,7 @@ const onSubmit = () => {
   text-align: center;
   border: 2px solid;
   padding: 50px;
+  backdrop-filter: blur(20px) saturate(150%) contrast(170%);
   border-radius: 20px;
 }
 

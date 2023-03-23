@@ -4,18 +4,17 @@ import { RouterLink } from "vue-router";
 <template>
   <div>
     <b-navbar toggleable="lg" class="navbar">
-      <b-navbar-brand class="fs-2" href="#">SIC_VUE_LOGIN</b-navbar-brand>
+      <b-navbar-brand class="fs-2 home-link" href="#">
+        <RouterLink to="/"> SIC_VUE_LOGIN </RouterLink>
+      </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse class="nav-collapse" id="nav-collapse" is-nav>
         <b-navbar-nav class="ms-auto nav-link">
-          <b-nav-item>
-            <RouterLink to="register">Register</RouterLink>
-          </b-nav-item>
-          <b-nav-item>
-            <RouterLink to="login">Login</RouterLink>
-          </b-nav-item>
+          <RouterLink to="/">HomePage</RouterLink>
+          <RouterLink to="register">Register</RouterLink>
+          <RouterLink to="login">Login</RouterLink>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -24,22 +23,33 @@ import { RouterLink } from "vue-router";
 
 <style scope>
 .navbar {
-  background: #e97835;
-  font-size: 1.5rem;
+  background: #888888;
+  font-size: 1.7rem;
 }
+
+.home-link > * {
+  text-decoration: none;
+  color: black;
+}
+
 .nav-link {
   text-align: end;
 }
 
 .nav-link > * {
-  margin: 0.3rem;
-  padding-right: 0.2rem;
+  margin: 0 0 0.3rem 0;
+  padding-left: 0.5rem;
+  padding-right: 0.7rem;
   color: black;
   text-decoration: none;
 }
 
 .nav-link > *:hover {
   color: black;
-  background: #f01;
+  background: #bbbbbb;
+}
+
+.home-link > *:hover {
+  color: black;
 }
 </style>
